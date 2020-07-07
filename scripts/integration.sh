@@ -14,9 +14,9 @@ CACHED_BUILDPACK_FILE=${CACHED_BUILDPACK_FILE:-""}
 
 cd src/*/integration
 
-echo "Run Uncached Buildpack without miniconda tests"
-BUILDPACK_FILE="$UNCACHED_BUILDPACK_FILE" \
-  ginkgo -r -mod=vendor -compilers=1 --flakeAttempts=$GINKGO_ATTEMPTS -nodes $GINKGO_NODES --slowSpecThreshold=60 -- --cached=false
+# echo "Run Uncached Buildpack without miniconda tests"
+# BUILDPACK_FILE="$UNCACHED_BUILDPACK_FILE" \
+#   ginkgo -r -mod=vendor -compilers=1 --flakeAttempts=$GINKGO_ATTEMPTS -nodes $GINKGO_NODES --slowSpecThreshold=60 -- --cached=false
 
 echo "Run Uncached Buildpack miniconda tests"
 BUILDPACK_FILE="$UNCACHED_BUILDPACK_FILE" \
