@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+df -h || true
+mount || true
+
 BUILD_DIR=$1
 CACHE_DIR=$2
 DEPS_DIR=$3
